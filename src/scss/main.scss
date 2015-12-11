@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Quicksand:400,700);
+
 body {
 	background: #fff;
+	font-family: 'Quicksand', sans-serif;
 	a {
 		color: #A4050D;
 		text-decoration: none;
@@ -24,6 +27,8 @@ body {
 		display: table;
 		margin: 0 auto;
 		color: #A4050D;
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 4.6em;
 	}
 	.main-nav {
 		ul {
@@ -81,7 +86,7 @@ body {
 					}
 					em {
 						color: transparent;
-						font-size: 13px;
+						font-size: .8em;
 						font-style: normal;
 						position: absolute;
 						width: 100%;
