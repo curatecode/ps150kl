@@ -26,9 +26,12 @@ body {
 	.main-logo {
 		display: table;
 		margin: 0 auto;
-		color: #A4050D;
-		font-family: 'Fjalla One', sans-serif;
 		font-size: 4.6em;
+		a {
+			text-decoration: none;
+			color: #A4050D;
+			font-family: 'Fjalla One', sans-serif;
+		}
 	}
 	.main-nav {
 		ul {
