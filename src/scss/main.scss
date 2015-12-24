@@ -24,13 +24,17 @@ body {
 	padding: 0;
 	@include transform(translate(-50%,-50%));
 	.main-logo {
+		background: url("../images/logo.png") no-repeat center center;
+		text-indent: -9999px;
+		overflow: hidden;
+		height: 250px;
+		width: 131px;
 		display: table;
-		margin: 0 auto;
-		font-size: 4.6em;
-		a {
-			text-decoration: none;
-			color: #A4050D;
-			font-family: 'Fjalla One', sans-serif;
+		margin: 0 auto 15px;
+		@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+		(min-resolution: 192dpi) {
+			background: url("../images/logo@2x.png") no-repeat center center;
+			background-size: cover;
 		}
 	}
 	.main-nav {
