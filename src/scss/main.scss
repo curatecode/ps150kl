@@ -15,6 +15,39 @@ body {
 	}
 }
 
+.nomar {margin:0!important}
+.nopad {padding:0!important}
+.m-t-xs{margin-top:5px !important}
+.m-b-xs{margin-bottom:5px !important}
+.m-r-xs{margin-right:5px !important}
+.m-l-xs{margin-left:5px !important}
+.m-t-sm{margin-top:10px !important}
+.m-b-sm{margin-bottom:10px !important}
+.m-r-sm{margin-right:10px !important}
+.m-l-sm{margin-left:10px !important}
+.m-t-md{margin-top:15px !important}
+.m-b-md{margin-bottom:15px !important}
+.m-r-md{margin-right:15px !important}
+.m-l-md{margin-left:15px !important}
+.m-t-lg{margin-top:30px !important}
+.m-b-lg{margin-bottom:30px !important}
+.m-r-lg{margin-right:30px !important}
+.m-l-lg{margin-left:30px !important}
+.m-t-xl{margin-top:50px !important}
+.m-b-xl{margin-bottom:50px !important}
+.m-r-xl{margin-right:50px !important}
+.m-l-xl{margin-left:50px !important}
+.m-v-xs{margin:5px 0 !important}
+.m-v-sm{margin:10px 0 !important}
+.m-v-md{margin:15px 0 !important}
+.m-v-lg{margin:30px 0 !important}
+.m-v-xl{margin:50px 0 !important}
+.m-h-xs{margin:0 5px !important}
+.m-h-sm{margin:0 10px !important}
+.m-h-md{margin:0 15px !important}
+.m-h-lg{margin:0 30px !important}
+.m-h-xl{margin:0 50px !important}
+
 .text-center {
 	text-align: center;
 }
@@ -26,6 +59,11 @@ body {
 		display: inline;
 	}
 }
+.list-unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
 .flex-ctr {
 	position: absolute;
@@ -35,6 +73,11 @@ body {
 	margin: 0;
 	padding: 0;
 	@include transform(translate(-50%,-50%));	
+	&.alt-ctr {
+		top: 0%;
+		padding: 50px 0;
+		@include transform(translate(-50%,0%));	
+	}
 }
 
 .main-logo {
@@ -126,4 +169,41 @@ body {
 	max-width: 960px;
 	margin-bottom: 50px;
 	line-height: 1.6em;
+	&.ps-menu {
+		width: 500px;
+	}
 }
+
+.ps-menu {
+	li.menu-list {
+		display: table;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.menu-header {
+		background: #f1f1f1;
+		padding: 3px 15px;
+		margin-top: 10px;
+	}
+	.ps-item,
+	.ps-price {
+		display: table-cell;
+	}
+	.ps-item {
+		width: 80%;
+	}
+	.ps-price {
+		padding-left: 20px;
+		text-align: right;
+	}
+	p {
+		margin: 0;
+	}
+	.item-desc {
+		font-size: .9em;
+		line-height: 1.4em;
+		color: #999;
+	}
+}
+
+
