@@ -206,4 +206,18 @@ body {
 	}
 }
 
-
+@media (max-width: 767px) {
+	.flex-ctr {
+		margin: 30px auto;
+		padding: 0 30px;
+		&.alt-ctr {
+			left: 0%;
+			@include transform(translate(0%,0%));
+		}
+	}
+	.pg-content,
+	.pg-content.ps-menu {
+		width: 100%;
+		max-width: 100%;
+	}
+}
