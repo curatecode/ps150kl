@@ -189,9 +189,6 @@ body {
 	.ps-price {
 		display: table-cell;
 	}
-	// .ps-item {
-	// 	width: 80%;
-	// }
 	.ps-price {
 		padding-left: 20px;
 		text-align: right;
@@ -212,6 +209,7 @@ body {
 		padding: 0 30px;
 		&.alt-ctr {
 			left: 0%;
+			padding: 0 30px;
 			@include transform(translate(0%,0%));
 		}
 	}
