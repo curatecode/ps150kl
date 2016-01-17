@@ -105,22 +105,13 @@ body {
 			padding: 15px 20px;
 			a {
 				display: block;
-				height: 50px;
-				width: 50px;
-				border: 3px solid #A4050D;
+				width: 80px;
+				background-repeat: no-repeat;
+				background-position: 0 0;
 				position: relative;
-				@include rounded(50px);
-				@include transition(.2s ease-in);
-				span {
-					display: block;
-					position: absolute;
-					@include transition(.2s ease-in);
-				}
+				@include transition(transform .2s ease-in);
 				&:hover {
 					@include transform(scale(1.1));
-					span {
-						background: #A4050D;
-					}
 					em {
 						color: inherit;
 						bottom: -30px;
@@ -128,26 +119,24 @@ body {
 					}
 				}
 				&.ps-about {
-					span {
-						height: 100%;
-						width: 50%;
-						@include rounded(50px 0 0 50px);
+					background-image: url("../images/marbles.png");
+					height: 72px;
+					&:hover {
+						background-position: 0 -72px;
 					}
 				}
 				&.ps-menu {
-					span {
-						height: 50%;
-						width: 100%;
-						bottom: 0;
-						@include rounded(0 0 50px 50px);
+					background-image: url("../images/caps.png");
+					height: 83px;
+					&:hover {
+						background-position: 0 -83px;
 					}
 				}
 				&.ps-contact {
-					span {
-						height: 100%;
-						width: 50%;
-						right: 0;
-						@include rounded(0 50px 50px 0);
+					background-image: url("../images/stones.png");
+					height: 74px;
+					&:hover {
+						background-position: 0 -74px;
 					}
 				}
 				em {
@@ -158,6 +147,21 @@ body {
 					width: 100%;
 					text-align: center;
 					bottom: 0;
+				}
+				@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+				(min-resolution: 192dpi) {
+					&.ps-about {
+						background-image: url("../images/marbles@2x.png");
+						background-size: 100%;
+					}
+					&.ps-menu {
+						background-image: url("../images/caps@2x.png");
+						background-size: 100%;
+					}
+					&.ps-contact {
+						background-image: url("../images/stones@2x.png");
+						background-size: 100%;
+					}
 				}
 			}
 		}
@@ -204,13 +208,51 @@ body {
 }
 
 @media (max-width: 767px) {
+	.main-logo {
+		width: 150px;
+		height: 289px;
+	}
 	.flex-ctr {
-		margin: 30px auto;
-		padding: 0 30px;
-		&.alt-ctr {
-			left: 0%;
+		// margin: 30px auto;
+		// left: 0%;
+		// top: 0%;
+		// padding: 0 30px;
+		// @include transform(translate(0%,0%));
+		width: 100%;
+		&.alt-ctr,
+		&.mbl-ctr {
+			top: 0;
+			left: 0;
+			margin: 30px auto;
 			padding: 0 30px;
+			width: auto;
 			@include transform(translate(0%,0%));
+		}
+	}
+	.main-nav ul {
+		li {
+			padding: 15px 10px;
+			a {
+				width: 60px;
+				&.ps-about {
+					height: 54px;
+					&:hover {
+						background-position: 0 -54px;
+					}
+				}
+				&.ps-menu {
+					height: 62px;
+					&:hover {
+						background-position: 0 -62px;
+					}
+				}
+				&.ps-contact {
+					height: 56px;
+					&:hover {
+						background-position: 0 -56px;
+					}
+				}
+			}
 		}
 	}
 	.pg-content,
